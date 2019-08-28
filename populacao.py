@@ -1,36 +1,11 @@
 import random as rm
 import numpy as np
 
-'''
-Aqui iria dar trabalho refazer, mas dá para importar só o que iremos usar. deixa o programa mais rápido.
-from random import random
-from numpy import chararray,random.normal
-
-'''
-
 class populacao:
 
-    def __init__(self):
-        n = input("Insira o tamanho 'n' da população: ")
-
-        '''
-        Acho que poderíamos adicionar caracteristicas da população como um todo nessa classe. Por exemplo
-        o que está no repositório do professor:
-        
-        self.tamanho = int(n) 
+    def __init__(self,n):
+        self.tamanho = int(n)
         self.individuos = self.pessoas(self.tamanho)
-        
-        aí lá embaixo ficaria print(self.individuos)
-        
-        '''
-
-        print("\nPOPULAÇÃO: Estudantes de curso superior de tecnologia\nLISTA DE ATRIBUTOS EM ORDEM:"
-              "\n\nRegião\nSexo\nCor\nSituação de Ocupação\nRendimento Mensal Domiciliar (Salários Mínimos)"
-              "\nRendimento Domiciliar Per Capita (Salários Mínimos)\nRede de Ensino\nModalidade\nTurno"
-              "\nDificuldade Financeira\nDificuldade de Acesso ao Local do Curso"
-              "\nDificuldade de cumprir o horário do curso\nFalta de tempo para estudar\nOutra dificuldade"
-              "\n\nMATRIZ POPULAÇÃO:\n")
-        print(self.pessoas(int(n)))
 
     def pessoas(self, n):
         pop = np.chararray((int(n),14), itemsize=15)
@@ -125,4 +100,3 @@ class populacao:
             pop[i, 13] = 'Sim' if (rm.random() <= (np.random.normal(6, 33.5) / 477)) else 'Nao'
 
         return pop
-populacao()
