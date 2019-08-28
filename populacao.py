@@ -6,11 +6,11 @@ class populacao:
     def __init__(self):
         n = input("Insira o tamanho 'n' da população: ")
         print("\nPOPULAÇÃO: Estudantes de curso superior de tecnologia\nLISTA DE ATRIBUTOS EM ORDEM:"
-              "\nRegião\nSexo\nCor\nSituação de Ocupação\nRendimento Mensal Domiciliar (Salários Mínimos)"
-              "Rendimento Domiciliar Per Capita (Salários Mínimos)\nRede de Ensino\nModalidade\nTurno"
-              "Dificuldade Financeira\nDificuldade de Acesso ao Local do Curso"
-              "Dificuldade de cumprir o horário do curso\nFalta de tempo para estudar\nOutra dificuldade"
-              "\nMATRIZ POPULAÇÃO:\n")
+              "\n\nRegião\nSexo\nCor\nSituação de Ocupação\nRendimento Mensal Domiciliar (Salários Mínimos)"
+              "\nRendimento Domiciliar Per Capita (Salários Mínimos)\nRede de Ensino\nModalidade\nTurno"
+              "\nDificuldade Financeira\nDificuldade de Acesso ao Local do Curso"
+              "\nDificuldade de cumprir o horário do curso\nFalta de tempo para estudar\nOutra dificuldade"
+              "\n\nMATRIZ POPULAÇÃO:\n")
         print(self.pessoas(int(n)))
 
     def pessoas(self, n):
