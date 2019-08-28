@@ -1,10 +1,29 @@
 import random as rm
 import numpy as np
 
+'''
+Aqui iria dar trabalho refazer, mas dá para importar só o que iremos usar. deixa o programa mais rápido.
+from random import random
+from numpy import chararray,random.normal
+
+'''
+
 class populacao:
 
     def __init__(self):
         n = input("Insira o tamanho 'n' da população: ")
+
+        '''
+        Acho que poderíamos adicionar caracteristicas da população como um todo nessa classe. Por exemplo
+        o que está no repositório do professor:
+        
+        self.tamanho = int(n) 
+        self.individuos = self.pessoas(self.tamanho)
+        
+        aí lá embaixo ficaria print(self.individuos)
+        
+        '''
+
         print("\nPOPULAÇÃO: Estudantes de curso superior de tecnologia\nLISTA DE ATRIBUTOS EM ORDEM:"
               "\n\nRegião\nSexo\nCor\nSituação de Ocupação\nRendimento Mensal Domiciliar (Salários Mínimos)"
               "\nRendimento Domiciliar Per Capita (Salários Mínimos)\nRede de Ensino\nModalidade\nTurno"
