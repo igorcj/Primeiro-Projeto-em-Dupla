@@ -100,3 +100,15 @@ class populacao:
             pop[i, 13] = 'Sim' if (rm.random() <= (np.random.normal(6, 33.5) / 477)) else 'Nao'
 
         return pop
+
+    def amostra(self, tamanho_amostra):
+
+        if tamanho_amostra > self.tamanho:
+            raise ValueError('"Tamanho da amostra" out of bounds.')
+        elif tamanho_amostra < 1:
+            raise ValueError('"Tamanho da amostra" out of bounds.')
+
+        else:
+            indices = rm.sample(range(self.tamanho), tamanho_amostra)
+            amostra = [self.individuos[x,:] for x in indices]
+        return amostra
