@@ -14,5 +14,3 @@ class individuo:
         self.d_cumprir_horario = vetor_atributos[11]
         self.falta_tempo = vetor_atributos[12]
         self.d_outra = vetor_atributos[13]
-
-

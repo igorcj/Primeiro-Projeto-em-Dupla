@@ -12,13 +12,14 @@ class populacao:
         for i in range(int(n)):
 
             #Escolha do atributo 1 (região):
-            if (rm.random() <= (np.random.normal(30, 10.7)/477)):
+            comparador = rm.random()
+            if (comparador <= (np.random.normal(30, 10.7)/477)):
                 pop[i,0] = 'Norte'
-            elif (rm.random() <= (np.random.normal(115, 8.4)/477)):
+            elif (comparador <= (np.random.normal(115, 8.4)/477)):
                 pop[i,0] = 'Nordeste'
-            elif (rm.random() <= (np.random.normal(360, 6)/477)):
+            elif (comparador <= (np.random.normal(360, 6)/477)):
                 pop[i,0] = 'Sudeste'
-            elif (rm.random() <= (np.random.normal(434, 8.9)/477)):
+            elif (comparador <= (np.random.normal(434, 8.9)/477)):
                 pop[i,0] = 'Sul'
             else:
                 pop[i,0] = 'Centro-Oeste'
@@ -33,35 +34,37 @@ class populacao:
             pop[i, 3] = 'Ocupado' if(rm.random() <= (np.random.normal(362, 4.4)/477)) else 'Nao Ocupado'
 
             #Escolha do atributo 5(Rendimento Mensal Domiciliar):
-            if (rm.random() <= (np.random.normal(11, 24.4)/477)):
+            comparador = rm.random()
+            if (comparador <= (np.random.normal(11, 24.4)/477)):
                 pop[i,4] = '0 a 1'
-            elif (rm.random() <= (np.random.normal(42, 13.4)/477)):
+            elif (comparador <= (np.random.normal(42, 13.4)/477)):
                 pop[i,4] = '1 a 2'
-            elif (rm.random() <= (np.random.normal(93, 11.4)/477)):
+            elif (comparador <= (np.random.normal(93, 11.4)/477)):
                 pop[i,4] = '2 a 3'
-            elif (rm.random() <= (np.random.normal(209, 7.7)/477)):
+            elif (comparador <= (np.random.normal(209, 7.7)/477)):
                 pop[i,4] = '3 a 5'
-            elif (rm.random() <= (np.random.normal(375, 7.1)/477)):
+            elif (comparador <= (np.random.normal(375, 7.1)/477)):
                 pop[i,4] = '5 a 10'
-            elif (rm.random() <= (np.random.normal(435, 11)/477)):
+            elif (comparador <= (np.random.normal(435, 11)/477)):
                 pop[i,4] = '10 a 20'
-            elif (rm.random() <= (np.random.normal(450, 23)/477)):
+            elif (comparador <= (np.random.normal(450, 23)/477)):
                 pop[i,4] = '20 ou mais'
             else:
                 pop[i,4] = 'Sem Declaracao'
 
             #Escolha do atributo 6(Rendimento Domiciliar Per Capita):
-            if (rm.random() <= (np.random.normal(21, 24.4)/477)):
-                pop[i,5] = '0 a 1/1'
-            elif (rm.random() <= (np.random.normal(109, 13.4)/477)):
+            comparador = rm.random()
+            if (comparador <= (np.random.normal(21, 24.4)/477)):
+                pop[i,5] = '0 a 1/2'
+            elif (comparador <= (np.random.normal(109, 13.4)/477)):
                 pop[i,5] = '1/2 a 1'
-            elif (rm.random() <= (np.random.normal(280, 11.4)/477)):
+            elif (comparador <= (np.random.normal(280, 11.4)/477)):
                 pop[i,5] = '1 a 2'
-            elif (rm.random() <= (np.random.normal(369, 7.7)/477)):
+            elif (comparador <= (np.random.normal(369, 7.7)/477)):
                 pop[i,5] = '2 a 3'
-            elif (rm.random() <= (np.random.normal(424, 7.1)/477)):
+            elif (comparador <= (np.random.normal(424, 7.1)/477)):
                 pop[i,5] = '3 a 5'
-            elif (rm.random() <= (np.random.normal(449, 11)/477)):
+            elif (comparador <= (np.random.normal(449, 11)/477)):
                 pop[i,5] = '5 ou mais'
             else:
                 pop[i,5] = 'Sem Declaracao'
@@ -70,13 +73,14 @@ class populacao:
             pop[i,6] = 'Publica' if(rm.random() <= (np.random.normal(105, 9.1)/477)) else 'Particular'
 
             #Escolha dos atributos 8(Modalidade) e 9(Turno):
-            if (rm.random() <= (np.random.normal(392, 4.3)/477)):
+            comparador = rm.random()
+            if (comparador <= (np.random.normal(392, 4.3)/477)):
                 pop[i, 7] = 'Presencial'
-                if (rm.random() <= (np.random.normal(48, 11.7)/392)):
+                if (comparador <= (np.random.normal(48, 11.7)/392)):
                     pop[i, 8] = 'Manha'
-                elif (rm.random() <= (np.random.normal(68, 17.5)/392)):
+                elif (comparador <= (np.random.normal(68, 17.5)/392)):
                     pop[i, 8] = 'Tarde'
-                elif (rm.random() <= (np.random.normal(370, 5)/392)):
+                elif (comparador <= (np.random.normal(370, 5)/392)):
                     pop[i, 8] = 'Noite'
                 else:
                     pop[i, 8] = 'Dois Parciais'
@@ -107,7 +111,6 @@ class populacao:
             raise ValueError('"Tamanho da amostra" out of bounds.')
         elif tamanho_amostra < 1:
             raise ValueError('"Tamanho da amostra" out of bounds.')
-
         else:
             indices = rm.sample(range(self.tamanho), tamanho_amostra)
             amostra = [self.individuos[x,:] for x in indices]

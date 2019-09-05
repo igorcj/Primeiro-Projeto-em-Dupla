@@ -1,0 +1,14 @@
+regiao,0.085,norte=0.063,nordeste=0.178,sudeste=0.514,sul=0.155,centro-oeste=0.090
+sexo,0.051,homem=0.564,mulher=0.436
+cor,0.052,branca=0.570,preta-ou-parda=0.430
+situacao-de-ocupacao,0.044,ocupado=0.759,nao-ocupado=0.241
+rendimento-mensal-domiciliar,0.1396,zero-a-um=0.023,um-a-dois=0.065,dois-a-tres=0.107,tres-a-cinco=0.243,cinco-a-dez=0.348,dez-a-vinte=0.126,vinte-ou-mais=0.031,sem-declaracao=0.057
+rendimento-domiciliar-per-capita,0.125,zero-a-meio=0.044,meio-a-um=0.184,um-a-dois=0.358,dois-a-tres=0.187,tres-a-cinco=0.115,cinco-ou-mais=0.052,sem-declaracao=0.059
+rede de ensino,0.091,publica=0.220,particular=0.780
+modalidade,0.043,presencial=0.822,a-distancia=0.178
+turno,0.114,manha=0.100,tarde=0.042,noite=0.633,dois-parciais=0.046,nao-se-aplica=0.178
+dificuldade-financeira,0.157,sim=0.057,nao=0.943
+dificuldade-de-acesso-ao-local-do-curso,0.17,sim=0.052,nao=0.948
+dificuldade-de-cumprir-o-horario-do-curso,0.165,sim=0.050,nao=0.950
+falta-de-tempo-para-estudar,0.216,sim=0.031,nao=0.969
+outra-dificuldade,0.335,sim=0.013,nao=0.987
